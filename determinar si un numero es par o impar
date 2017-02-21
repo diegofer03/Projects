@@ -1,0 +1,17 @@
+//determinar si un numero es par o impar
+
+#include <stdio.h>
+int main (){
+	int x,y;
+	printf ("Escribe un numero:\n");
+	scanf ("%i",&x);
+	y=x%2;
+	if (y==0){
+		printf ("el numero %i es par.\n",x);
+	}
+	else {
+		printf ("el numero %i es impar.\n",x);
+	}
+	system ("pause");
+	return 0;
+}
