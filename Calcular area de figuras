@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+	float x,a,b;
+	printf ("BIENVENIDO A LA CALCULADORA DE AREAS\n");
+	printf ("Para calcular el area de un cuadrado presiones 1\nPara calcular el area de un rectangulo presione 2.\nPara calcular el area de un triangulo presiones 3.\n");
+    scanf ("%f",&x);
+	if (x==1){
+		printf ("Calcular el area un cuadrado.\n");
+		printf ("Introduce la longitud de un lado del cuadrado:");
+	    scanf ("%f",&a);
+	    x=pow(a,2);//pow se coloca cuando se quiere elevar un numero a potencia, pow(a,b) donde "a" es la base y "b" la potencia.
+	    printf ("El area del cuadrado es:%f.\n",x);
+	}	
+	if (x==2){
+		printf ("calcular el area de un rectangulo.\n");
+		printf ("Introduce base del rectangulo:");
+	    scanf ("%f",&b);
+	    printf ("Introduce altura del rectangulo:");
+	    scanf ("%f",&a);
+	    x=b*a;
+	    printf ("El area del rectangulo es:%f\n",x);
+	}
+	if (x==3){
+		printf ("Calcular el area de un triangulo.\n");
+		printf ("Introduce altura del triangulo:\n");
+	    scanf ("%f",&a);
+	    printf ("Introduce base del triangulo:\n");
+	    scanf ("%f",&b);
+	    x=b*a/2;
+	    printf ("El area del triangulo es:%f\n",x);
+	}
+	printf ("GRACIAS POR USAR EL PROGRAMA.\n");
+	system ("pause");
+	return 0;
+}
