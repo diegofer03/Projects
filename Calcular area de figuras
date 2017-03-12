@@ -2,10 +2,12 @@
 #include <math.h>
 int main(){
 	float x,a,b;
+	char r;
 	printf ("BIENVENIDO A LA CALCULADORA DE AREAS\n");
-	printf ("Para calcular el area de un cuadrado presiones 1\nPara calcular el area de un rectangulo presione 2.\nPara calcular el area de un triangulo presiones 3.\n");
-    scanf ("%f",&x);
-	if (x==1){
+	do {
+	   printf ("Para calcular el area de un cuadrado presiones 1\nPara calcular el area de un rectangulo presione 2.\nPara calcular el area de un triangulo presiones 3.\n");
+       scanf ("%f",&x);
+	   if (x==1){
 		printf ("Calcular el area un cuadrado.\n");
 		printf ("Introduce la longitud de un lado del cuadrado:");
 	    scanf ("%f",&a);
@@ -29,7 +31,10 @@ int main(){
 	    scanf ("%f",&b);
 	    x=b*a/2;
 	    printf ("El area del triangulo es:%f\n",x);
-	}
+	    }
+	    printf ("Si desea calcular el area de otra figura presione (s), si desea salir del programa presione (n)\n.");
+	    r=getch();
+	} while (r=='s');
 	printf ("GRACIAS POR USAR EL PROGRAMA.\n");
 	system ("pause");
 	return 0;
