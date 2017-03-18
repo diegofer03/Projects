@@ -1,0 +1,26 @@
+int main(){
+	int x,i,mayor,menor,total;
+	char r;
+	i=0;menor=9999;mayor=-1;total=0;
+	do{
+		printf ("introduce un numero:");
+		scanf ("%i",&x);
+		if (x<menor){
+			menor=x;
+		}
+		if (x>mayor){
+			mayor=x;
+		}
+		printf ("desea ingresar otro numero s/n?\n");
+		r=getch();
+		i++;
+		total=total+x;
+	}while(r=='s'||r=='S');
+	
+	printf ("ha introducido %i numeros.\n",i);
+	printf ("el numero mayor es:%i\n",mayor);
+	printf ("el numero menor es:%i\n",menor);
+	printf ("la suma de los numeros es: %i\n",total);
+	system ("pause");
+	return 0;
+}
